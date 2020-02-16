@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+    double i;//原來的利潤
+    double bonus1,bonus2,bonus4,bonus6,bonus10;//不同的利潤分到不同比例的錢
+    double bonus;//最後的利潤
+    printf("你原來的利潤:");
+    scanf("%lf",&i);
+    bonus1 = 100000*0.1; //不同的利潤分到不同比例的錢
+    bonus4 = bonus2 + 200000*0.05;//注意數字間不能有空格 ex:0. 5,否則會出錯
+    bonus6 = bonus4 + 200000*0.03;
+    bonus10 = bonus6 + 400000*0.015 ;
+    if ( i <= 100000 ) {
+        bonus = i*0.1 ;
+     } else if ( i>100000&&i <= 200000 ) {
+            bonus = bonus1+ ( i- 100000 )*0.075 ;
+     } else if ( i>200000&&i <= 400000 ) {
+            bonus = bonus2 + ( i-200000 )*0.05 ;
+     } else if ( i>400000&&i <= 600000 ) {
+            bonus = bonus4 + ( i-400000 ) *0.03   ;
+     } else if ( i>600000&&i <= 1000000 ) {
+            bonus = bonus6 + ( i-600000 )*0.015 ;
+     } else if ( i > 1000000 ) {
+            bonus = bonus10 + ( i-1000000)*0.01 ;
+     }
+    printf("後來的利潤:%lf",bonus);
+    return 0;
+}
