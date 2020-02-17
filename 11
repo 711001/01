@@ -1,0 +1,16 @@
+#include<stdio.h>
+ 
+int main()//共有幾對,40個月內 
+{	int a=1,b=1,c;
+	for(c=1;c<=20;c++){
+		printf("%16d,%16d",a,b);
+		if(c%2==0){
+			printf("\n");
+		}
+		a=a+b;
+		b=a+b;
+		
+	}
+	
+    return 0;
+} 
