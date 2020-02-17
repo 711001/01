@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+    int x,y,z,t;
+    printf("請輸入三個數字:");
+    scanf("%d%d%d",&x,&y,&z);
+    if (x>y) { //交換x,y的值
+        t=x;x=y;y=t;
+    }
+    if(x>z) { //交換x,z的值
+        t=z;z=x;x=t;
+    }
+    if(y>z) { //交換z,y的值
+        t=y;y=z;z=t;
+    }
+    printf("從小到大排序: %d %d %d\n",x,y,z);
+    return 0;
+}
