@@ -1,0 +1,22 @@
+#include <stdio.h>
+void palin(int n);
+int main()
+{
+    int i=5;
+    printf("輸入5個字符:");
+    palin(i);
+   
+}
+void palin(int n)
+{
+    char next;
+    if(n<=1) {
+        next=getchar();
+        printf("相反:");
+        putchar(next);
+    } else {
+        next=getchar();
+        palin(n-1);
+        putchar(next);
+    }
+}
