@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+	int a=0,n=0,s=0,t=0;
+	printf("請輸入a和n:");
+	scanf("%d,%d",&a,&n);
+	t=a;
+	while(n>0){
+		s+=t;
+		t=a*10+a;
+		n--;
+	}
+	printf("a+aa+aaa+....=%d",s);
+	return 0;
+}
