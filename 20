@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+	float sum=100,high=100;
+	high=high/2;//第一次反彈高度
+	int i=2;
+	for(i=2;i<=10;i++){
+		sum=sum+2*high;
+		high=high/2;
+	} 
+	printf("第10次落地，共%f米，第10次反彈高%f米\n",sum,high);
+	return 0;
+}
