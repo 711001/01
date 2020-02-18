@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main( )
+{
+    int a,b,c,d,e,x;
+    printf("輸入5位字：");
+    scanf("%d",&x);
+    a=x/10000;        /*分解出万位*/
+    b=x%10000/1000;   /*分解出千位*/
+    c=x%1000/100;     /*分解出百位*/
+    d=x%100/10;       /*分解出十位*/
+    e=x%10;           /*分解出個位*/
+    if (a!=0){
+        printf(" 5 位,逆序： %d %d %d %d %d\n",e,d,c,b,a);
+    } else if(b!=0) {
+         printf(" 4 位,逆序： %d %d %d %d\n",e,d,c,b);
+    } else if(c!=0) {
+         printf(" 3 位,逆序：%d %d %d\n",e,d,c);
+    } else if(d!=0) {
+         printf(" 2 位,逆序： %d %d\n",e,d);
+    } else if(e!=0) {
+         printf("1 位,逆序:%d\n",e);
+    }
+}
