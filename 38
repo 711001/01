@@ -1,0 +1,17 @@
+#include<stdio.h>
+#define N 3
+int main()
+{
+    int a[3][3],b,c,sum=0;
+    printf("輸入矩陣(3*3)：\n");
+    for (b=0;b<N;b++){
+    	for (c=0;c<N;c++){
+    		scanf("%d",&a[b][c]);
+		}
+	}
+	for (b=0;b<N;b++){
+		sum+=a[b][b];
+	}
+	printf("對角之和：%d\n",sum);
+    return 0;
+}
