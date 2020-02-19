@@ -1,0 +1,43 @@
+#include<stdio.h>
+int main(){
+	char a,b;
+	printf("請輸入一個字符:");
+	scanf("%c",&a);
+	getchar();
+	switch(a){
+		case'm':
+			printf("monday");
+			break;
+		case'w':
+			printf("wednesday");
+			break;
+		case'f':
+			printf("friday");
+			break;
+		case't':
+			printf("請輸入一個字符:");
+			scanf("%c",&b);
+			if(b=='e'){
+				printf("tuesday");
+				break;
+			}
+			if(b=='h'){
+				printf("thursday");
+				break;
+			}
+		case's':
+			printf("請輸入一個字符:");
+			scanf("%c",&b);
+			if(b=='a'){
+				printf("saturday");
+				break;
+			}
+			if(b=='u'){
+				printf("sunday");
+				break;
+			}
+		default :
+            printf("error\n"); break;
+	}
+	return 0;
+}
